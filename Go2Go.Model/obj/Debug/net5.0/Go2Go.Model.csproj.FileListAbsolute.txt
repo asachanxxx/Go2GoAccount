@@ -1,0 +1,15 @@
+K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Model\bin\Debug\net5.0\Go2Go.Model.deps.json
+K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Model\bin\Debug\net5.0\Go2Go.Model.runtimeconfig.json
+K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Model\bin\Debug\net5.0\Go2Go.Model.runtimeconfig.dev.json
+K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Model\bin\Debug\net5.0\Go2Go.Model.dll
+K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Model\bin\Debug\net5.0\ref\Go2Go.Model.dll
+K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Model\bin\Debug\net5.0\Go2Go.Model.pdb
+K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Model\obj\Debug\net5.0\Go2Go.Model.csproj.AssemblyReference.cache
+K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Model\obj\Debug\net5.0\Go2Go.Model.GeneratedMSBuildEditorConfig.editorconfig
+K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Model\obj\Debug\net5.0\Go2Go.Model.AssemblyInfoInputs.cache
+K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Model\obj\Debug\net5.0\Go2Go.Model.AssemblyInfo.cs
+K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Model\obj\Debug\net5.0\Go2Go.Model.csproj.CoreCompileInputs.cache
+K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Model\obj\Debug\net5.0\Go2Go.Model.dll
+K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Model\obj\Debug\net5.0\ref\Go2Go.Model.dll
+K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Model\obj\Debug\net5.0\Go2Go.Model.pdb
+K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Model\obj\Debug\net5.0\Go2Go.Model.genruntimeconfig.cache

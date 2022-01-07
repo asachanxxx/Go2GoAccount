@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="Go2GoWeb20220105044841" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^K:\\Go2Go\\File\\Go2Go_Finance\\Go2Go\\Go2Go\.Web\\obj\\Release\\net5\.0\\PubTmp\\Out\\$" />
+  </parameter>
+</parameters>

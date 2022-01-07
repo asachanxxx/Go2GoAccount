@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Go2Go.Core\Go2Go.Core.csproj" />
+    <ProjectReference Include="..\Go2Go.Data\Go2Go.Data.csproj" />
+    <ProjectReference Include="..\Go2Go.Model\Go2Go.Model.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="UOW\" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,48 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2022-01-04T23:30:30.9776736Z"
+    },
+    "appInsights1": {
+      "restored": true,
+      "restoreTime": "2022-01-05T10:24:56.2243002Z"
+    },
+    "apis1": {
+      "restored": true,
+      "restoreTime": "2022-01-04T23:24:17.63087Z"
+    }
+  },
+  "parameters": {
+    "apis1.resourceGroupName": {
+      "Name": "apis1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "Go2GoWeb20220105044841ResourceGroup"
+    },
+    "appInsights1.subscriptionId": {
+      "Name": "appInsights1.subscriptionId",
+      "Type": "subscription",
+      "Value": "85c52381-15e0-4f14-a8c8-22068aeee7f6"
+    },
+    "appInsights1.resourceGroupName": {
+      "Name": "appInsights1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "Go2GoWeb20220105044841ResourceGroup"
+    },
+    "mssql1.subscriptionId": {
+      "Name": "mssql1.subscriptionId",
+      "Type": "subscription",
+      "Value": "85c52381-15e0-4f14-a8c8-22068aeee7f6"
+    },
+    "apis1.subscriptionId": {
+      "Name": "apis1.subscriptionId",
+      "Type": "subscription",
+      "Value": "85c52381-15e0-4f14-a8c8-22068aeee7f6"
+    },
+    "mssql1.resourceGroupName": {
+      "Name": "mssql1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "Go2GoWeb20220105044841ResourceGroup"
+    }
+  }
+}

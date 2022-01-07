@@ -1,0 +1,15 @@
+K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Core\bin\Debug\net5.0\Go2Go.Core.deps.json
+K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Core\bin\Debug\net5.0\Go2Go.Core.dll
+K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Core\bin\Debug\net5.0\ref\Go2Go.Core.dll
+K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Core\bin\Debug\net5.0\Go2Go.Core.pdb
+K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Core\bin\Debug\net5.0\Go2Go.Model.dll
+K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Core\bin\Debug\net5.0\Go2Go.Model.pdb
+K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Core\obj\Debug\net5.0\Go2Go.Core.csproj.AssemblyReference.cache
+K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Core\obj\Debug\net5.0\Go2Go.Core.GeneratedMSBuildEditorConfig.editorconfig
+K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Core\obj\Debug\net5.0\Go2Go.Core.AssemblyInfoInputs.cache
+K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Core\obj\Debug\net5.0\Go2Go.Core.AssemblyInfo.cs
+K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Core\obj\Debug\net5.0\Go2Go.Core.csproj.CoreCompileInputs.cache
+K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Core\obj\Debug\net5.0\Go2Go.Core.csproj.CopyComplete
+K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Core\obj\Debug\net5.0\Go2Go.Core.dll
+K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Core\obj\Debug\net5.0\ref\Go2Go.Core.dll
+K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Core\obj\Debug\net5.0\Go2Go.Core.pdb

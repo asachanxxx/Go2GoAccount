@@ -1,0 +1,1155 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Go2Go.Web",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Token/Authenticate": {
+      "post": {
+        "tags": [
+          "Token"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UserCredentials"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Trip/add-trip": {
+      "post": {
+        "tags": [
+          "Trip"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/TripViewModel"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "/api/Trip": {
+      "get": {
+        "tags": [
+          "Trip"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Trip"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Trip"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Trip"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Trip"
+            }
+          }
+        }
+      }
+    },
+    "/api/Trip/{id}": {
+      "get": {
+        "tags": [
+          "Trip"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Trip"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Trip"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Trip"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Trip"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Trip"
+            }
+          }
+        }
+      }
+    },
+    "/api/TripPayment": {
+      "get": {
+        "tags": [
+          "TripPayment"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/TripPayment"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "TripPayment"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/TripPayment"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/TripPayment"
+            }
+          }
+        }
+      }
+    },
+    "/api/TripPayment/{id}": {
+      "get": {
+        "tags": [
+          "TripPayment"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/TripPayment"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "TripPayment"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/TripPayment"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "TripPayment"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/TripPayment"
+            }
+          }
+        }
+      }
+    },
+    "/api/UserLedger/get-ledger-balance/{userId}": {
+      "post": {
+        "tags": [
+          "UserLedger"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "userId",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "/api/UserLedger/get-ledger-balance-for-key/{userkey}": {
+      "post": {
+        "tags": [
+          "UserLedger"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "userkey",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "/api/UserLedger": {
+      "get": {
+        "tags": [
+          "UserLedger"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/UserLedger"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "UserLedger"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UserLedger"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/UserLedger"
+            }
+          }
+        }
+      }
+    },
+    "/api/UserLedger/{id}": {
+      "get": {
+        "tags": [
+          "UserLedger"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/UserLedger"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "UserLedger"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UserLedger"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "UserLedger"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/UserLedger"
+            }
+          }
+        }
+      }
+    },
+    "/api/UserPayment": {
+      "get": {
+        "tags": [
+          "UserPayment"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/UserPayment"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "UserPayment"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UserPayment"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/UserPayment"
+            }
+          }
+        }
+      }
+    },
+    "/api/UserPayment/{id}": {
+      "get": {
+        "tags": [
+          "UserPayment"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/UserPayment"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "UserPayment"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UserPayment"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "UserPayment"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/UserPayment"
+            }
+          }
+        }
+      }
+    },
+    "/api/Users": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/User"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        }
+      }
+    },
+    "/api/Users/{id}": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Users"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Users"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "TreansactionType": {
+      "format": "int32",
+      "enum": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "type": "integer"
+    },
+    "Trip": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fKey": {
+          "type": "string"
+        },
+        "tripId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "tripNo": {
+          "type": "string"
+        },
+        "driverID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "date": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fire": {
+          "format": "double",
+          "type": "number"
+        },
+        "distance": {
+          "format": "double",
+          "type": "number"
+        },
+        "duration": {
+          "format": "double",
+          "type": "number"
+        }
+      }
+    },
+    "TripPayment": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "tripId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "driverId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "commissionedDriverId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fKey": {
+          "type": "string"
+        },
+        "distance": {
+          "format": "double",
+          "type": "number"
+        },
+        "duration": {
+          "format": "double",
+          "type": "number"
+        },
+        "vehicleType": {
+          "$ref": "#/definitions/VehicleTypes"
+        },
+        "appPrice": {
+          "format": "double",
+          "type": "number"
+        },
+        "commission": {
+          "format": "double",
+          "type": "number"
+        },
+        "timePrice": {
+          "format": "double",
+          "type": "number"
+        },
+        "totalFare": {
+          "format": "double",
+          "type": "number"
+        },
+        "companyPayable": {
+          "format": "double",
+          "type": "number"
+        },
+        "commissionApplicable": {
+          "type": "boolean"
+        }
+      }
+    },
+    "TripViewModel": {
+      "type": "object",
+      "properties": {
+        "fKey": {
+          "type": "string"
+        },
+        "driverKey": {
+          "type": "string"
+        },
+        "tripId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "tripNo": {
+          "type": "string"
+        },
+        "date": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "distance": {
+          "format": "double",
+          "type": "number"
+        },
+        "duration": {
+          "format": "double",
+          "type": "number"
+        },
+        "driverId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "commissionedDriverId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "commissionedDriverKey": {
+          "type": "string"
+        },
+        "vehicleType": {
+          "$ref": "#/definitions/VehicleTypes"
+        },
+        "appPrice": {
+          "format": "double",
+          "type": "number"
+        },
+        "commission": {
+          "format": "double",
+          "type": "number"
+        },
+        "timePrice": {
+          "format": "double",
+          "type": "number"
+        },
+        "totalFare": {
+          "format": "double",
+          "type": "number"
+        },
+        "kmPrice": {
+          "format": "double",
+          "type": "number"
+        },
+        "companyPayable": {
+          "format": "double",
+          "type": "number"
+        },
+        "commissionApplicable": {
+          "type": "boolean"
+        }
+      }
+    },
+    "User": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fKey": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "fullName": {
+          "type": "string"
+        },
+        "userType": {
+          "$ref": "#/definitions/UserTypes"
+        },
+        "phoneNumber": {
+          "type": "string"
+        },
+        "genaratedId": {
+          "type": "string"
+        }
+      }
+    },
+    "UserCredentials": {
+      "type": "object",
+      "properties": {
+        "userName": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      }
+    },
+    "UserLedger": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "trxId": {
+          "type": "string"
+        },
+        "driverId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "driverKey": {
+          "type": "string"
+        },
+        "tripId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "treansactionType": {
+          "$ref": "#/definitions/TreansactionType"
+        },
+        "description": {
+          "type": "string"
+        },
+        "flag": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "amount": {
+          "format": "double",
+          "type": "number"
+        },
+        "balance": {
+          "format": "double",
+          "type": "number"
+        },
+        "trxDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "recordDate": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "UserPayment": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "driverId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "paymentId": {
+          "type": "string"
+        },
+        "paymentDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "paymentAmt": {
+          "format": "double",
+          "type": "number"
+        }
+      }
+    },
+    "UserTypes": {
+      "format": "int32",
+      "enum": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "type": "integer"
+    },
+    "VehicleTypes": {
+      "format": "int32",
+      "enum": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "type": "integer"
+    }
+  }
+}
