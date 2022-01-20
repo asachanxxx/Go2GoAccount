@@ -42,6 +42,8 @@ namespace Go2Go.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+           
+
             services.AddControllersWithViews();
             services.AddAuthentication(authOption =>
             {
@@ -62,11 +64,19 @@ namespace Go2Go.Web
 
                 };
             });
+            services.AddCors(c =>
+            {
+                //c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
+                c.AddDefaultPolicy(op =>
+                {
+                    op.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+                });
+            });
             //https://docs.microsoft.com/en-us/aspnet/core/performance/caching/middleware?view=aspnetcore-6.0
             services.AddResponseCaching();
             //https://docs.microsoft.com/en-us/azure/azure-monitor/app/asp-net-core
             services.AddApplicationInsightsTelemetry();
-            services.AddSingleton(typeof(IJwtTokenManager), typeof(JwtTokenManager));
+            services.AddScoped(typeof(IJwtTokenManager), typeof(JwtTokenManager));
             services.AddSwaggerGen();
             services.AddDbContext<Go2GoContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("StuConn")));
@@ -79,14 +89,12 @@ namespace Go2Go.Web
 
             services.AddScoped<ILogicalCalculations, LogicalCalculations>();
             services.AddScoped<IAccountService, AccountService>();
+            services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<Go2GoContext>();
 
             services.Configure<CompanySettings>(Configuration.GetSection("CompanySettings"));
             services.AddSingleton<ISerialGenarator, SerialGenarator>();
-            services.AddCors(c =>
-            {
-                c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
-            });
+           
 
         }
 
@@ -147,7 +155,7 @@ namespace Go2Go.Web
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseRouting();
-            app.UseCors("AllowOrigin");
+            app.UseCors();
             app.UseAuthentication();
             app.UseAuthorization();
 

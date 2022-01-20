@@ -19,6 +19,78 @@ namespace Go2Go.Data.Migrations
                 .HasAnnotation("ProductVersion", "5.0.13")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("Go2Go.Model.Security.GRole", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("RoleName")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RoleName")
+                        .IsUnique()
+                        .HasFilter("[RoleName] IS NOT NULL");
+
+                    b.ToTable("GRoles");
+                });
+
+            modelBuilder.Entity("Go2Go.Model.Security.GUser", b =>
+                {
+                    b.Property<int>("UserID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FKey")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FirstName")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("LastName")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("LoginName")
+                        .HasMaxLength(40)
+                        .HasColumnType("nvarchar(40)");
+
+                    b.Property<byte[]>("PasswordHash")
+                        .HasMaxLength(64)
+                        .HasColumnType("binary(64)")
+                        .IsFixedLength(true);
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("RoleId")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("Salt")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("UserType")
+                        .HasColumnType("int");
+
+                    b.HasKey("UserID");
+
+                    b.HasIndex("LoginName")
+                        .IsUnique()
+                        .HasFilter("[LoginName] IS NOT NULL");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("GUsers");
+                });
+
             modelBuilder.Entity("Go2Go.Model.Trip", b =>
                 {
                     b.Property<int>("Id")
@@ -252,6 +324,15 @@ namespace Go2Go.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("UserPayments");
+                });
+
+            modelBuilder.Entity("Go2Go.Model.Security.GUser", b =>
+                {
+                    b.HasOne("Go2Go.Model.Security.GRole", "Role")
+                        .WithMany()
+                        .HasForeignKey("RoleId");
+
+                    b.Navigation("Role");
                 });
 #pragma warning restore 612, 618
         }

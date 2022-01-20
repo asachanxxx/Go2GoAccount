@@ -1,4 +1,5 @@
 ﻿using Go2Go.Model;
+using Go2Go.Model.Security;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -21,6 +22,8 @@ namespace Go2Go.Data.Context
         public DbSet<UserPayment> UserPayments { get; set; }
         public DbSet<UserLedger> UserLedgers { get; set; }
         public DbSet<UserBalance> UserBalances { get; set; }
+        public DbSet<GRole> GRoles { get; set; }
+        public DbSet<GUser> GUsers { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -46,8 +49,12 @@ namespace Go2Go.Data.Context
             modelBuilder.Entity<UserBalance>().Property(obj => obj.Credit).HasPrecision(12, 2);
             modelBuilder.Entity<UserBalance>().Property(obj => obj.Debit).HasPrecision(12, 2);
 
+            modelBuilder.Entity<GUser>().Property(x => x.PasswordHash).HasMaxLength(64).IsFixedLength();
 
-            //modelBuilder.Entity<User>().HasData(new User { Id = 0, Email ="company@go2go.com" , FKey= "go2go", FullName = "Go2Go inc." , GenaratedId = "10000" ,PhoneNumber = "0778151151" , UserType = Go2Go.Model.Enum.UserTypes.Go2GoCompany });
+            //Indexes
+            modelBuilder.Entity<GUser>().HasIndex(b => b.LoginName).IsUnique(true);
+            modelBuilder.Entity<GRole>().HasIndex(b => b.RoleName).IsUnique(true);
+
 
             base.OnModelCreating(modelBuilder);
         }

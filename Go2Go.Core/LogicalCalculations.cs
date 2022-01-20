@@ -35,8 +35,8 @@ namespace Go2Go.Core
         public async Task<decimal> CalCompanyPortion(TripCalViewModel tripCalViewModel)
         {
             decimal companyPayable = ((tripCalViewModel.KmPrice + tripCalViewModel.TimePrice) * _options.Value.SCR) / 100;
-            decimal commissionPortion = (companyPayable * (100 - _options.Value.ODR)) / 100;
-            return await Task.FromResult(commissionPortion);
+            decimal CompanyPortion = (companyPayable * (100 - _options.Value.ODR)) / 100;
+            return await Task.FromResult(CompanyPortion);
         }
 
         public async Task<decimal> CalDriverPortion(TripCalViewModel tripCalViewModel)
@@ -87,7 +87,6 @@ namespace Go2Go.Core
                 case TreansactionType.AppPricePortion: //debit app price debited from driver 
                     userLedger.Description = "App price";
                     userLedger.Amount = tripViewModel.AppPrice;
-                    userLedger.Amount = amt;
                     userLedger.Flag = 2;
                     userLedger.TreansactionType = treansactionType;
                     break;

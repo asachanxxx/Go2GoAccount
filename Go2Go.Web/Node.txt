@@ -1,1 +1,12 @@
 ﻿https://stackoverflow.com/questions/34606332/calculate-balance-from-credit-and-debit-records
+
+Local Connection String 
+"StuConn": "Data Source=DESKTOP-E15V86C\\SQLEXPRESS;Initial Catalog=go2go_dev;Integrated Security=SSPI;"
+
+SQL Change Tracking
+-------------------
+COlumns Added to GUsers
+	[Email] [nvarchar](max) NULL,
+	[FKey] [nvarchar](max) NULL,
+	[PhoneNumber] [nvarchar](max) NULL,
+	[UserType] [int] NOT NULL,

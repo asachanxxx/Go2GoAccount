@@ -12,7 +12,8 @@ namespace Go2Go.Implementations.Services
     public interface IAccountService
     {
         Task<bool> SaveTripRecord(TripViewModel tripViewModel);
-        Task<UserBalance> GetLedgerBalanceForUser(int userId);
-        Task<UserBalance> GetLedgerBalanceForKey(string userKey);
+        Task<DriverBalanceViewModel> GetLedgerBalanceForUser(int userId);
+        Task<DriverBalanceViewModel> GetLedgerBalanceForKey(string userKey);
+        Task<IEnumerable<UserLedgerViewModel>> GetLedgerEntry(string userKey);
     }
 }

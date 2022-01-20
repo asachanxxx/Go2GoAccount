@@ -1,5 +1,4 @@
 ﻿using Go2Go.Core;
-using Go2Go.Core.Exceptions;
 using Go2Go.Core.Factories;
 using Go2Go.Core.Genarators;
 using Go2Go.Data.Context;
@@ -8,13 +7,13 @@ using Go2Go.Model.Enum;
 using Go2Go.Model.ViewModels;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
+using Dapper;
 
 namespace Go2Go.Implementations.Services
 {
@@ -30,17 +29,31 @@ namespace Go2Go.Implementations.Services
             _go2GoContext = go2GoContext;
             _serialGenarator = serialGenarator;
         }
-
-        public async Task<UserBalance> GetLedgerBalanceForUser(int userId)
+        public async Task<IEnumerable<UserLedgerViewModel>> GetLedgerEntry(string userKey)
         {
-            var userBalance = await _go2GoContext.UserBalances.FindAsync(userId);
-            return userBalance;
+            using (IDbConnection conn = _go2GoContext.Database.GetDbConnection())
+            {
+                var results = await conn.QueryAsync<UserLedgerViewModel>("Sp_GetLedgerEntry", new { userId = userKey }, commandType: CommandType.StoredProcedure);
+                return results.ToList();
+            }
+        }
+        public async Task<DriverBalanceViewModel> GetLedgerBalanceForUser(int userId)
+        {
+            DriverBalanceViewModel driverBalanceViewModel = new DriverBalanceViewModel();
+            using (IDbConnection conn = _go2GoContext.Database.GetDbConnection()) {
+                driverBalanceViewModel = await conn.QueryFirstOrDefaultAsync<DriverBalanceViewModel>("Sp_GetLedgerBalanceForUser", new { userId = userId },commandType:CommandType.StoredProcedure);
+            }
+            return driverBalanceViewModel;
         }
 
-        public async Task<UserBalance> GetLedgerBalanceForKey(string userKey)
+        public async Task<DriverBalanceViewModel> GetLedgerBalanceForKey(string userKey)
         {
-            var userBalance = await _go2GoContext.UserBalances.FirstOrDefaultAsync(a => a.UserKey == userKey);
-            return userBalance;
+            DriverBalanceViewModel driverBalanceViewModel = new DriverBalanceViewModel();
+            using (IDbConnection conn = _go2GoContext.Database.GetDbConnection())
+            {
+                driverBalanceViewModel = await conn.QueryFirstOrDefaultAsync<DriverBalanceViewModel>("Sp_GetLedgerBalanceForKey", new { userId = userKey }, commandType: CommandType.StoredProcedure);
+            }
+            return driverBalanceViewModel;
         }
 
         public async Task<bool> SaveTripRecord(TripViewModel tripViewModel)
@@ -132,5 +145,7 @@ namespace Go2Go.Implementations.Services
                 throw;
             }
         }
+
+     
     }
 }

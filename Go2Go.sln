@@ -3,15 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Go2Go.Web", "Go2Go.Web\Go2Go.Web.csproj", "{DA15B07E-2764-4D2C-8C59-AE338361DB82}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Go2Go.Web", "Go2Go.Web\Go2Go.Web.csproj", "{DA15B07E-2764-4D2C-8C59-AE338361DB82}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Go2Go.Model", "Go2Go.Model\Go2Go.Model.csproj", "{D46FC962-B593-4A45-A157-DA6571112709}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Go2Go.Model", "Go2Go.Model\Go2Go.Model.csproj", "{D46FC962-B593-4A45-A157-DA6571112709}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Go2Go.Data", "Go2Go.Data\Go2Go.Data.csproj", "{93FAF95F-D420-4561-A4CD-2DDB649A0EB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Go2Go.Data", "Go2Go.Data\Go2Go.Data.csproj", "{93FAF95F-D420-4561-A4CD-2DDB649A0EB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Go2Go.Core", "Go2Go.Core\Go2Go.Core.csproj", "{21199E0E-5D46-4C2B-AA58-CB4DDAC68C6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Go2Go.Core", "Go2Go.Core\Go2Go.Core.csproj", "{21199E0E-5D46-4C2B-AA58-CB4DDAC68C6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Go2Go.Implementations", "Go2Go.Implementations\Go2Go.Implementations.csproj", "{17003DA9-C347-4BD2-A0CF-CFC6AE0D9F6A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Go2Go.Implementations", "Go2Go.Implementations\Go2Go.Implementations.csproj", "{17003DA9-C347-4BD2-A0CF-CFC6AE0D9F6A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataBase", "DataBase", "{D07B5B88-5605-4B93-8560-6C87934FD7B9}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Go2GoDatabase", "Go2GoDatabase\Go2GoDatabase.sqlproj", "{96E2489F-69A3-4B4C-A827-0548BBFC502C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,9 +43,18 @@ Global
 		{17003DA9-C347-4BD2-A0CF-CFC6AE0D9F6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17003DA9-C347-4BD2-A0CF-CFC6AE0D9F6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17003DA9-C347-4BD2-A0CF-CFC6AE0D9F6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96E2489F-69A3-4B4C-A827-0548BBFC502C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96E2489F-69A3-4B4C-A827-0548BBFC502C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96E2489F-69A3-4B4C-A827-0548BBFC502C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{96E2489F-69A3-4B4C-A827-0548BBFC502C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96E2489F-69A3-4B4C-A827-0548BBFC502C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96E2489F-69A3-4B4C-A827-0548BBFC502C}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{96E2489F-69A3-4B4C-A827-0548BBFC502C} = {D07B5B88-5605-4B93-8560-6C87934FD7B9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {61543D45-8827-4B56-AB04-21A0E487A1C8}

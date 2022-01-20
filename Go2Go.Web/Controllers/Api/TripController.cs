@@ -4,6 +4,7 @@ using Go2Go.Implementations.Services;
 using Go2Go.Model;
 using Go2Go.Model.ViewModels;
 using Go2Go.Web.Implimentation;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace Go2Go.Web.Controllers.Api
 {
-    
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class TripController : BaseController<Trip, EfCoreTripRepository>

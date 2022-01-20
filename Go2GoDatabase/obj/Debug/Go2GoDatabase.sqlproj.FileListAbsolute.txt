@@ -1,0 +1,8 @@
+K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2GoDatabase\bin\Debug\Go2GoDatabase.dacpac
+K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2GoDatabase\obj\Debug\Go2GoDatabase.sqlproj.AssemblyReference.cache
+K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2GoDatabase\obj\Debug\Model.xml
+K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2GoDatabase\obj\Debug\refactor.xml
+K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2GoDatabase\obj\Debug\postdeploy.sql
+K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2GoDatabase\obj\Debug\predeploy.sql
+K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2GoDatabase\obj\Debug\Go2GoDatabase.dll
+K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2GoDatabase\obj\Debug\Go2GoDatabase.pdb

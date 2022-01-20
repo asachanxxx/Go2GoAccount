@@ -350,7 +350,7 @@
       }
     },
     "/api/UserLedger/get-ledger-balance/{userId}": {
-      "post": {
+      "get": {
         "tags": [
           "UserLedger"
         ],
@@ -372,14 +372,14 @@
           "200": {
             "description": "Success",
             "schema": {
-              "type": "boolean"
+              "$ref": "#/definitions/DriverBalanceViewModel"
             }
           }
         }
       }
     },
     "/api/UserLedger/get-ledger-balance-for-key/{userkey}": {
-      "post": {
+      "get": {
         "tags": [
           "UserLedger"
         ],
@@ -400,7 +400,35 @@
           "200": {
             "description": "Success",
             "schema": {
-              "type": "boolean"
+              "$ref": "#/definitions/DriverBalanceViewModel"
+            }
+          }
+        }
+      }
+    },
+    "/api/UserLedger/get-ledger-entries/{userkey}": {
+      "get": {
+        "tags": [
+          "UserLedger"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "userkey",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/UserLedgerViewModel"
             }
           }
         }
@@ -834,6 +862,19 @@
     }
   },
   "definitions": {
+    "DriverBalanceViewModel": {
+      "type": "object",
+      "properties": {
+        "driverId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "balance": {
+          "format": "double",
+          "type": "number"
+        }
+      }
+    },
     "TreansactionType": {
       "format": "int32",
       "enum": [
@@ -1099,6 +1140,40 @@
           "type": "string"
         },
         "recordDate": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "UserLedgerViewModel": {
+      "type": "object",
+      "properties": {
+        "driverKey": {
+          "type": "string"
+        },
+        "tripId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "description": {
+          "type": "string"
+        },
+        "trxId": {
+          "type": "string"
+        },
+        "flag": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "amount": {
+          "format": "double",
+          "type": "number"
+        },
+        "balance": {
+          "format": "double",
+          "type": "number"
+        },
+        "trxDate": {
           "format": "date-time",
           "type": "string"
         }

@@ -2,8 +2,10 @@ K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Implementations\bin\Debug\net5.0\Go2Go.I
 K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Implementations\bin\Debug\net5.0\Go2Go.Implementations.dll
 K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Implementations\bin\Debug\net5.0\ref\Go2Go.Implementations.dll
 K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Implementations\bin\Debug\net5.0\Go2Go.Implementations.pdb
+K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Implementations\bin\Debug\net5.0\Go2Go.Core.dll
 K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Implementations\bin\Debug\net5.0\Go2Go.Data.dll
 K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Implementations\bin\Debug\net5.0\Go2Go.Model.dll
+K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Implementations\bin\Debug\net5.0\Go2Go.Core.pdb
 K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Implementations\bin\Debug\net5.0\Go2Go.Data.pdb
 K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Implementations\bin\Debug\net5.0\Go2Go.Model.pdb
 K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Implementations\obj\Debug\net5.0\Go2Go.Implementations.csproj.AssemblyReference.cache
@@ -15,5 +17,3 @@ K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Implementations\obj\Debug\net5.0\Go2Go.I
 K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Implementations\obj\Debug\net5.0\Go2Go.Implementations.dll
 K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Implementations\obj\Debug\net5.0\ref\Go2Go.Implementations.dll
 K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Implementations\obj\Debug\net5.0\Go2Go.Implementations.pdb
-K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Implementations\bin\Debug\net5.0\Go2Go.Core.dll
-K:\Go2Go\File\Go2Go_Finance\Go2Go\Go2Go.Implementations\bin\Debug\net5.0\Go2Go.Core.pdb
